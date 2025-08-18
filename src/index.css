@@ -1,0 +1,148 @@
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #005fa3;
+}
+
+hr {
+    margin: 1rem 0 1rem;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.flex-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #005fa3;
+    font-weight: bold;
+    flex: 50%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+@media (max-width: 1024px) {
+    .flex-container {
+      flex-direction: column;
+    }
+}
+
+.flex-item:hover {
+    background: linear-gradient(to right, #e0f0ff, #d0eaff);
+    transform: scale(1.02);
+    box-shadow: 0 2px 10px rgba(0, 95, 163, 0.15);
+}
+
+.flex-item--warning {
+    background-color: #fff6e5;
+    border-color: #f0c36d;
+    color: #a85c00;
+}
+
+.flex-item--warning:hover {
+    background-color: #fff0cc;
+}
+
+footer {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 1.5em;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+/* Wenn der Dark Mode aktiviert ist */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .flex-item {
+    background-color: #333;
+    border: 1px solid #444;
+    color: #bb86fc;
+}
+
+body.dark-mode h1 {
+    color: #bb86fc;
+}
+
+body.dark-mode a {
+    color: #bb86fc;
+}
+
+body.dark-mode .flex-item--warning {
+    background-color: #3f2a00;
+    border-color: #f0c36d;
+    color: #f0c36d;
+}
+
+body.dark-mode footer {
+    color: #bbb;
+}
+
+.dark-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background-color: transparent;
+    color: #bb86fc;
+    border: 2px solid #bb86fc;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-toggle:hover {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+.dark-toggle svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+#sun {
+    display: none;
+}
