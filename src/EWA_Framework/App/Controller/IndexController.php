@@ -29,7 +29,7 @@ class IndexController extends BaseController {
         * $data = $model->getAll();
         * $data = $model->getById();
         */
-        $data = ['example_string' => 'Lorem ipsum dolor sit amet', 'example_int' => '42', 'example_array' => [1, 2]];
+        $data = ['example_string' => 'Lorem ipsum dolor sit amet', 'example_int' => 42, 'example_array' => [1, 2]];
         return $data;
     }
 
