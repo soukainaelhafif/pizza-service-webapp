@@ -1,6 +1,6 @@
 <?php
 $title = "Übersicht";
-require_once("head.php");
+require_once __DIR__ . "/head.php";
 ?>
 <main>
   <h2>Willkommen beim Pizzaservice 🍕</h2>
@@ -12,4 +12,6 @@ require_once("head.php");
     <li><a href="customer.php">Kunde</a></li>
   </ul>
 </main>
-<?php require_once("footer.php"); ?>
+<?php
+require_once __DIR__ . "/footer.php";
+?>
