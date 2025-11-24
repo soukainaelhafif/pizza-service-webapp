@@ -20,12 +20,14 @@ abstract class BaseModel
         // TODO: Replace these placeholders with your actual database credentials
         $user = 'public';
         $password = 'public';
-        $database = 'YOUR_DATABASE'; 
+        $database = 'pizzaservice'; 
 
-        if ($database === 'YOUR_DATABASE') {
+        /*
+        if ($database === 'pizzaservice') {
             echo '<h2>⚠️ Please set your database credentials in BaseModel.php before continuing.</h2>';
             exit;
         }
+        */
 
         $this->db = new MySQLi($host, $user, $password, $database);
 
