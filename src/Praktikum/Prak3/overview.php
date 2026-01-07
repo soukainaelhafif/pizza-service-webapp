@@ -1,4 +1,8 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 $title = 'Übersicht – Pizza Service';
 require __DIR__ . '/EWA_Framework/App/View/partials/head.php';
 ?>

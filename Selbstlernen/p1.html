@@ -1,24 +1,30 @@
-<?php
-$title = "Bestellung";
-require_once("head.php");
-?>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bestellung</h1>
+
     <main>
     <h2>Speisekarte</h2>
     
         <section>
-            <img src ="/Praktikum/Prak3/EWA_Framework/assets/images/pizza_salami.png" alt = "Pizza salami" width =200>
+            <img src ="../src/Praktikum/Prak3/EWA_Framework/assets/images/pizza_salami.png" alt = "Pizza salami" width =200>
             <p>Pizza Salami </p>
             <p> - 8,57 euro</p>
         </section> 
         
         <section>
-            <img src ="/Praktikum/Prak3/EWA_Framework/assets/images/pizza_margherita.png" alt = "Pizza Margherita" width =200>
+            <img src ="../src/Praktikum/Prak3/EWA_Framework/assets/images/pizza_margherita.png" alt = "Pizza Margherita" width =200>
             <p>Pizza Margherita </p>
             <p> - 12,5 euro</p>
         </section>  
 
         <section>
-            <img src ="/Praktikum/Prak3/EWA_Framework/assets/images/pizza_hawaii.png" alt = "Pizza Hawaii" width = 200>
+            <img src ="../src/Praktikum/Prak3/EWA_Framework/assets/images/pizza_hawaii.png" alt = "Pizza Hawaii" width = 200>
             <p>Pizza Hawaii </p>
             <p> - 11,99 euro</p>
         </section>
@@ -26,7 +32,7 @@ require_once("head.php");
 
         <h2>Warenkorb</h2>
 
-        <form method ="Post" action ="https://echo.hofmann-thomas.de/">
+        <form method ="Get" action ="https://echo.hofmann-thomas.de/">
         <input type ="text" placeholder="Adresse eingeben" name = "Adresse_input" required>
         <br><br>
 
@@ -43,10 +49,6 @@ require_once("head.php");
         </form>
 
     </main>
-
-
-<?php 
-require_once("footer.php"); 
-?>
-
-
+    
+</body>
+</html>

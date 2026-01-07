@@ -84,6 +84,11 @@ class OrderController extends BaseController
 
         // ================== 4) Weiterleitung mit PRG-Pattern ==================
         if ($orderingId !== false && $orderingId !== null) {
+        
+            if (session_status() === PHP_SESSION_NONE) {
+                session_start();
+            }   
+                
             $_SESSION['last_ordering_id'] = (int)$orderingId;
             header('Location: customer.php?message=success');
             exit;

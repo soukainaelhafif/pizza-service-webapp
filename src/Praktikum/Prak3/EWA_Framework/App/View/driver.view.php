@@ -15,13 +15,14 @@ require __DIR__ . '/partials/head.php';
 
             echo '<form action="driver.php" method="post" style="margin-bottom:18px;">';
             echo '<fieldset>';
-            echo '<legend>Auslieferung #' . htmlspecialchars((string)$orderingId) .
-                 ' - Adresse: ' . htmlspecialchars((string)($order['address'] ?? '')) . '</legend>';
+            echo '<legend>Auslieferung #' . htmlspecialchars((string)$orderingId, ENT_QUOTES, 'UTF-8') .
+            ' - Adresse: ' . htmlspecialchars((string)($order['address'] ?? ''), ENT_QUOTES, 'UTF-8') . '</legend>';
 
-            echo '<p>Enthält: ' . htmlspecialchars((string)($order['articles'] ?? '')) . '</p>';
+            echo '<p>Enthält: ' . htmlspecialchars((string)($order['articles'] ?? ''), ENT_QUOTES, 'UTF-8') . '</p>';
 
             $total = (float)($order['total_price'] ?? 0);
-            echo '<p>Gesamtpreis: ' . htmlspecialchars(number_format($total, 2, ',', '.')) . ' €</p>';
+            echo '<p>Gesamtpreis: ' . htmlspecialchars(number_format($total, 2, ',', '.'), ENT_QUOTES, 'UTF-8') . ' €</p>';
+
 
             echo '<label><input type="radio" name="status_' . $orderingId . '" value="4" required> Unterwegs</label> ';
             echo '<label><input type="radio" name="status_' . $orderingId . '" value="5" required> Ausgeliefert (Zum Löschen)</label>';

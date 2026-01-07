@@ -9,6 +9,10 @@ class CustomerController extends BaseController
     {
         $this->customerModel = $this->customerModel ?? new CustomerModel();
 
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
         $orderingId = $_SESSION['last_ordering_id'] ?? null;
         if ($orderingId === null) {
             return [];
