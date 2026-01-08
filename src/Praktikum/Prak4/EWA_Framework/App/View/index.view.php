@@ -26,9 +26,12 @@ require __DIR__ . '/partials/head.php';
                            data-name="<?= htmlspecialchars($name) ?>"
                            data-price="<?= htmlspecialchars($price) ?>">
                         <img class="pizza-card__img"
-                             src="<?= htmlspecialchars($imgSrc) ?>"
-                             alt="<?= htmlspecialchars($name) ?>">
-
+                            src="<?= htmlspecialchars($imgSrc) ?>"
+                            alt="<?= htmlspecialchars($name) ?>"
+                            width="220"
+                            height="220"
+                            loading="lazy">
+                            
                         <div class="pizza-card__name">
                             <?= htmlspecialchars($name) ?>
                         </div>
